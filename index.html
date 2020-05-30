@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AirBnB_Demo</title>
+    <!-- <link rel="icon" href="src/img/mdb-favicon.ico" type="image/x-icon"> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Template styles -->
+    <link href="css/animate.html" rel="stylesheet">
+    <link href="css/plugin.css" rel="stylesheet">
+   
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/signup_form.css">
+    <link href="css/style_template.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/main.css" rel="stylesheet">
+
+    
+</head>
+<body>
+    <header class="main_header">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/android-icon-192x192-c0465f9f0380893768972a31a614b670.png" width="24px;">
+                </a>
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav smooth-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link"  onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Log In</a>
+                            <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>  -->
+
+                            <div id="id02" class="modal2"> 
+                                <form class="modal-content animate" action="#">
+                                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span> 
+                                    <div class="user_info_model_container">
+                                        <h4 class="signup_form_title">Log In</h4> 
+                                        <label><b>Email</b></label> 
+                                        <input type="text" class="user_info_input" placeholder="Enter Email" name="email" required> 
+                        
+                                        <label><b>Password</b></label> 
+                                        <input type="password"  class="user_info_input" placeholder="Enter Password" name="psw" required> 
+                        
+                                        <input type="checkbox"> Remember me 
+                                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> 
+                        
+                                        <div class="clearfix"> 
+                                            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn user_info_button">Cancel</button> 
+                                            <button type="submit" class="signupbtn user_info_button">Log In</button> 
+                                        </div> 
+                                    </div> 
+                                </form> 
+                            </div> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</a>
+                            <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>  -->
+
+                            <div id="id01" class="modal"> 
+                                <form class="modal-content animate" action="#"> 
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span> 
+                                    <div class="user_info_model_container">
+                                        <h4 class="signup_form_title">Sign Up</h4> 
+                                        <label><b>Email</b></label> 
+                                        <input type="text" class="user_info_input" placeholder="Enter Email" name="email" required> 
+                        
+                                        <label><b>Password</b></label> 
+                                        <input type="password"  class="user_info_input" placeholder="Enter Password" name="psw" required> 
+                        
+                                        <label><b>Repeat Password</b></label> 
+                                        <input type="password" class="user_info_input" placeholder="Repeat Password" name="psw-repeat" required> 
+                                        <input type="checkbox"> Remember me 
+                                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> 
+                        
+                                        <div class="clearfix"> 
+                                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn user_info_button">Cancel</button> 
+                                            <button type="submit" class="signupbtn user_info_button">Sign Up</button> 
+                                        </div> 
+                                    </div> 
+                                </form> 
+                            </div> 
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Commercial & Industrial Space</a>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+                </div>
+                <!-- Collapsible content -->
+            </div>
+        </nav>
+        <!--/.Navbar-->
+        <!-- FUll Screen Body -->
+        <div class="col-12 col-md-9 col-lg-5 col-xl-3 search_location_modal">
+            <div class="menu-horizontal-wrapper-02">
+        
+                <nav class="menu-horizontal-02">
+                    <div class="font-weight-bold business_location_search_title"><span>Find Your Next Business Location</span></div>
+                </nav>
+                
+                <div class="tab-content">
+                
+                    <div role="tabpanel" class="tab-pane active" id="formSearchMain-01">
+                    
+                        <div class="tab-inner menu-horizontal-content">
+                            
+                            <div class="form-search-main-01">
+                            
+                                <form>
+        
+                                    <div class="form-inner">
+                                    
+                                        <div class="row gap-10 mb-15 align-items-end">
+                                            
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label>Destination</label>
+                                                    <div class="form-icon-left typeahead__container">
+                                                        <span class="icon-font text-muted"><i class="bx bx-map"></i></span>
+                                                            <input class="js-typeahead-country_v1 form-control" name="country_v1[query]" type="search" placeholder="Country or city" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="col-inner">
+                                                    <div id="airDatepickerRange-hotel" class="row gap-10 mb-15">
+                                                
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label>Check-in</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                                    <input type="text" id="dateStart-hotel" class="form-control form-readonly-control" placeholder="dd/mm/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label>Check-out</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                                    <input type="text" id="dateEnd-hotel" class="form-control form-readonly-control" placeholder="dd/mm/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 ">
+                                            
+                                                <div class="col-inner">
+                                                
+                                                    <div class="row gap-10 mb-15">
+                                                
+                                                        <div class="col-4 col-sm-6 col-md-4">
+                                                            <div class="form-group form-spin-group">
+                                                                <label for="room-amount">Rooms</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-home-alt"></i></span>
+                                                                    <input type="text" class="form-control touch-spin-03 form-readonly-control" placeholder="0" readonly />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-8 col-sm-6 col-md-8">
+                                                            <div class="col-inner">
+                                                                <div class="form-people-thread">
+                                                                    <div class="row gap-5 align-items-center">
+                                                                        <div class="col">
+                                                                            <div class="form-group form-spin-group">
+                                                                                <label for="room-amount">Adults <small class=" text-muted font10 line-1">(12-75)</small></label>
+                                                                                <div class="form-icon-left">
+                                                                                    <span class="icon-font text-muted"><i class="bx bx-user"></i></span>
+                                                                                    <input type="text" class="form-control touch-spin-03 form-readonly-control" placeholder="0" readonly />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <div class="form-group form-spin-group">
+                                                                                <label for="room-amount">Children <small class="text-muted font10 line-1">(2-12)</small></label>
+                                                                                <div class="form-icon-left">
+                                                                                    <span class="icon-font text-muted"><i class="bx bx-user"></i></span>
+                                                                                    <input type="text" class="form-control touch-spin-03 form-readonly-control" placeholder="0" readonly />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                                <a href="#" class="btn btn-primary btn-block">Search now</a>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                
+                                </form>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane fade in" id="formSearchMain-02">
+                        
+                        <div class="tab-inner menu-horizontal-content">
+                            
+                            <div class="form-search-main-01">
+                            
+                                <form>
+                                
+                                    <div class="form-inner">
+        
+                                        <div class="mb-10">
+                    
+                                            <div class="custom-control custom-radio  custom-control-inline">
+                                                <input type="radio" id="flightSearchRadio-1" name="flightSearchRadio" class="custom-control-input" checked>
+                                                <label class="custom-control-label" for="flightSearchRadio-1">Return</label>
+                                            </div>
+                                            
+                                            <div class="custom-control custom-radio  custom-control-inline">
+                                                <input type="radio" id="flightSearchRadio-2" name="flightSearchRadio" class="custom-control-input">
+                                                <label class="custom-control-label" for="flightSearchRadio-2">One-way</label>
+                                            </div>
+                                            
+                                            <div class="custom-control custom-radio  custom-control-inline">
+                                                <input type="radio" id="flightSearchRadio-3" name="flightSearchRadio" class="custom-control-input">
+                                                <label class="custom-control-label" for="flightSearchRadio-3">Multicities</label>
+                                            </div>
+                                            
+                                        </div>
+                                
+                                        <div class="row gap-10 mb-15">
+                                            
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>From</label>
+                                                    <div class="form-icon-left typeahead__container">
+                                                        <span class="icon-font text-muted"><i class="bx bx-map"></i></span>
+                                                            <input class="js-typeahead-country_v1 form-control" name="country_v1[query]" type="search" placeholder="Country or city" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>To</label>
+                                                    <div class="form-icon-left typeahead__container">
+                                                        <span class="icon-font text-muted"><i class="bx bx-map"></i></span>
+                                                            <input class="js-typeahead-country_v1 form-control" name="country_v1[query]" type="search" placeholder="Country or city" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                                <div class="col-inner">
+                                                    <div id="airDatepickerRange-flight" class="row gap-10 mb-15">
+                                                
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label>Check-in</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                                    <input type="text" id="dateStart-flight" class="form-control form-readonly-control" placeholder="dd/mm/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label>Check-out</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                                    <input type="text" id="dateEnd-flight" class="form-control form-readonly-control" placeholder="dd/mm/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                                <div class="col-inner">
+                                                    <div class="row gap-5">
+                                                        <div class="col-4">
+                                                            <div class="form-group form-spin-group">
+                                                                <label for="room-amount">Adult <small class="text-muted font10 line-1">(12-75)</small></label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-user"></i></span>
+                                                                    <input type="text" class="form-control touch-spin-03 form-readonly-control" placeholder="0" readonly />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <div class="form-group form-spin-group">
+                                                                <label for="room-amount">Child <small class="text-muted font10 line-1">(2-12)</small></label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-user"></i></span>
+                                                                    <input type="text" class="form-control touch-spin-03 form-readonly-control" placeholder="0" readonly />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <div class="form-group form-spin-group">
+                                                                <label for="room-amount">Infant <small class="text-muted font10 line-1">(0-2)</small></label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-user"></i></span>
+                                                                    <input type="text" class="form-control touch-spin-03 form-readonly-control" placeholder="0" readonly />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="d-flex flex-row align-items-center mt-20">
+                                            <div class="mr-auto">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="flightSearchCheck-1" />
+                                                    <label class="custom-control-label" for="flightSearchCheck-1">(-/+ 3 days)</label>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary btn-wide">Search now</a>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                </form>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane fade in" id="formSearchMain-03">
+                        
+                        <div class="tab-inner menu-horizontal-content">
+                            
+                            <div class="form-search-main-01">
+                            
+                                <form>
+        
+                                    <div class="form-inner">
+            
+                                        <div class="row gap-10 mb-15 align-items-center">
+                                            
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>Pick-up Location</label>
+                                                    <div class="form-icon-left typeahead__container">
+                                                        <span class="icon-font text-muted"><i class="bx bx-map"></i></span>
+                                                            <input class="js-typeahead-country_v1 form-control" name="country_v1[query]" type="search" placeholder="Country or city" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>Drop-off Location</label>
+                                                    <div class="form-icon-left typeahead__container">
+                                                        <span class="icon-font text-muted"><i class="bx bx-map"></i></span>
+                                                            <input class="js-typeahead-country_v1 form-control" name="country_v1[query]" type="search" placeholder="Country or city" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                            
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="carCheck11">
+                                                    <label class="custom-control-label" for="carCheck11">Return car to the same location</label>
+                                                </div>
+                                                
+                                            </div>
+                                                
+                                            <div class="col-6">
+                                            
+                                                <div class="form-group">
+                                                    <label>Pick-up Date</label>
+                                                    <div class="form-icon-left">
+                                                        <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                        <input type="text" class="form-control form-readonly-control air-datepicker" placeholder="pick a date and time" data-language="en" data-timepicker="true" readonly>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="col-6">
+                                            
+                                                <div class="form-group">
+                                                    <label>Drop-off Date</label>
+                                                    <div class="form-icon-left">
+                                                        <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                        <input type="text" class="form-control form-readonly-control air-datepicker" placeholder="pick a date and time" data-language="en" data-timepicker="true" readonly>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                            
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="carCheck21" checked >
+                                                    <label class="custom-control-label" for="carCheck21">Driver aged 25-70 from Thailand</label>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                                <a href="#" class="btn btn-primary btn-block">Search now</a>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </form>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane fade in" id="formSearchMain-04">
+                        
+                        <div class="tab-inner menu-horizontal-content">
+                            
+                            <div class="form-search-main-01">
+                            
+                                <form>
+        
+                                    <div class="form-inner">
+                                    
+                                        <div class="row gap-10 mb-15 align-items-sm-center">
+                    
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label>Destination</label>
+                                                    <div class="form-icon-left typeahead__container">
+                                                        <span class="icon-font text-muted"><i class="bx bx-map"></i></span>
+                                                            <input class="js-typeahead-country_v1 form-control" name="country_v1[query]" type="search" placeholder="Country or city" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 col-sm-8 col-md-9">
+                                                <div class="col-inner">
+                                                    <div class="row gap-10 mb-15">
+                                            
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label>When</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                                    <input type="text" class="form-control form-readonly-control air-datepicker" placeholder="Pick a month" data-min-view="months" data-view="months" data-date-format="MM yyyy" data-language="en" data-auto-close="true" readonly>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label>Type of tour</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><span class="icon-inner"><i class="bx bx-calendar"></i></span></span>
+                                                                    <select  data-placeholder="Please select" class="chosen-no-search form-control" tabindex="2">
+                                                                        <option></option>
+                                                                        <option>Adventure</option>
+                                                                        <option>City tour</option>
+                                                                        <option>Honeymoon</option>
+                                                                        <option>Cultural</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                            
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="col-4 col-sm-4 col-md-3">
+                                                <div class="form-group form-spin-group">
+                                                    <label>Guests</label>
+                                                    <div class="form-icon-left">
+                                                        <span class="icon-font text-muted"><i class="bx bx-user"></i></span>
+                                                        <input type="text" class="form-control touch-spin-03 form-readonly-control" placeholder="0" readonly />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                            
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="preferLocalGuide" />
+                                                    <label class="custom-control-label" for="preferLocalGuide">Prefer private local guide</label>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                                <a href="#" class="btn btn-primary btn-block">Search now</a>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                
+                                </form>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane fade in" id="formSearchMain-05">
+                        
+                        <div class="tab-inner menu-horizontal-content">
+                            
+                            <div class="form-search-main-01">
+                            
+                                <form>
+        
+                                    <div class="form-inner">
+                                    
+                                        <div class="row gap-10 mb-15 align-items-end">
+                    
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label>Destination</label>
+                                                    <div class="form-icon-left typeahead__container">
+                                                        <span class="icon-font text-muted"><i class="bx bx-map"></i></span>
+                                                            <input class="js-typeahead-country_v1 form-control" name="country_v1[query]" type="search" placeholder="Country or city" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 col-sm-12 col-md-12">
+                                                <div class="col-inner">
+                                                    <div id="airDatepickerRange-guide" class="row gap-10 mb-15">
+                                                
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label>Check-in</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                                    <input type="text" id="dateStart-guide" class="form-control form-readonly-control" placeholder="dd/mm/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-6">
+                                                            <div class="form-group">
+                                                                <label>Check-out</label>
+                                                                <div class="form-icon-left">
+                                                                    <span class="icon-font text-muted"><i class="bx bx-calendar"></i></span>
+                                                                    <input type="text" id="dateEnd-guide" class="form-control form-readonly-control" placeholder="dd/mm/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-8">
+                                                <div class="form-group">
+                                                    <label>Speak</label>
+                                                    <div class="form-icon-left">
+                                                        <span class="icon-font text-muted"><span class="icon-inner"><i class="bx bx-globe"></i></span></span>
+                                                        <select multiple data-placeholder="Please select" class="chosen-no-search form-control" tabindex="2">
+                                                            <option></option>
+                                                            <option>English</option>
+                                                            <option>French</option>
+                                                            <option>Italiano</option>
+                                                            <option>Arabic</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-4">
+                                                <div class="form-group form-spin-group">
+                                                    <label>How many days?</label>
+                                                    <div class="form-icon-left">
+                                                        <span class="icon-font text-muted"><i class="bx bx-user"></i></span>
+                                                        <input type="text" class="form-control touch-spin-03 form-readonly-control" placeholder="0" readonly />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                                <a href="#" class="btn btn-primary btn-block">Search now</a>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                
+                                </form>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+       
+    </header>
+
+    <!--Main layout-->
+    <main class="mt-5">
+        <div class="container container_body">
+            <section id="best-features">
+                <h4 class="mb-20 mt-50 font-weight-bold">Explore Airbnb</h4>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4 px-1.5">
+                        <div class="view overlay z-depth-1-half rounded-lg">
+                            <a href="explore_airbnb_stays.html">
+                                <div class="body_travel_world d-flex flex-row justify-content-start align-items-center">
+                                    <div class="col-lg-5 px-0"><img src="images/main/8b7519ec-2c82-4c09-8233-fd4d2715bbf9.jpg" class="img-fluid rounded-lg img_travel_world" alt=""></div>
+                                    <div class="text_travel_world col-lg-7">
+                                        <h6 class="font-weight-bold text_travel_world">Stays</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4 px-1.5">
+                        <div class="view overlay z-depth-1-half rounded-lg">
+                            <a href="explore_airbnb_experience.html">
+                                <div class="body_travel_world d-flex flex-row justify-content-start align-items-center">
+                                    <div class="col-lg-5 px-0"><img src="images/main/a77ee672-e790-4362-8cc5-52bec1371ece.jpg" class="img-fluid rounded-lg img_travel_world" alt=""></div>
+                                    <div class="text_travel_world col-lg-7">
+                                        <h6 class="font-weight-bold text_travel_world">Experiences</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4 px-1.5">
+                        <div class="view overlay z-depth-1-half rounded-lg">
+                            <a href="explore_airbnb_adventure.html">
+                                <div class="body_travel_world d-flex flex-row justify-content-start align-items-center">
+                                    <div class="col-lg-5 px-0"><img src="images/main/38f2bfd6-1f4d-46d7-babf-61657deef302.jpg" class="img-fluid rounded-lg img_travel_world" alt=""></div>
+                                    <div class="text_travel_world col-lg-7">
+                                        <h6 class="font-weight-bold text_travel_world">Adventures</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- <hr class="my-5"> -->
+            <section id="examples">
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-12 col-md-12 mb-12 mt-30">
+                        <div class="view overlay z-depth-1- rounded-lg">
+                            <img src="images/main/a211e229-4c34-44d9-a7cb-82304660bc27.jpg" class="img-fluid border-ra rounded-lg" width="100%" alt="">
+                            <div class="mask rgba-white-slight ">
+                                <div class="introducing_cooking">
+                                    <img class="mt-50 ml-50" src="images/main/6b277da4-da99-40dd-ba3f-f4c4169ac478.jpg" width="25%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="my-5">
+            <!--Section: Gallery-->
+            <section id="gallery">
+                <!-- Heading -->
+                <h4 class="mb-3 font-weight-bold" >Introducing AirBnb Adventures</h4>
+                <h6 class="mb-5 font-weight-light">Multi-day trips led by local experts-activities, meals, and stays included</h6>
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="card-deck">
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/64c23cf2-4833-4506-ab06-c943c7489709.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">NORWAY</h6>
+                                <!--Text-->
+                                <p class="card-text">2 Night PACKAGE All inclusive From $633/person·3days</p>
+                                <i class="fas fa-star">5.0(1)</i>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/3ef320d7-c283-4603-a6a7-080cf1350231.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">THAILAND</h6>
+                                <!--Text-->
+                                <p class="card-text">Highlights of Thailand From $475/person·3days</p>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                       <!-- Card -->
+                       <div class="card mb-3 card_box_shadow_none">
+                        <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/e87b64e2-b998-43b2-91e6-1e39c0096e0f.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">MEXICO</h6>
+                                <!--Text-->
+                                <p class="card-text">Queretaro & San Miguel Explorer 3-day<br>From $453/person·3days</p>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/e5fb7a9a-d068-4e71-a33c-4f6ba0fc9be6.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">MEXICO</h6>
+                                <!--Text-->
+                                <p class="card-text">Taste local wines and stargaze in Baja<br>From $501/person·3days</p>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/bb0e3192-eac8-49af-9001-57e5943824d3.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">THAILAND</h6>
+                                <!--Text-->
+                                <p class="card-text">Ayutthaya Riverine Discovery 3-day<br>From $633/person·3days</p>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        
+                    </div>
+
+                    <div><a class="show_all_adventures green-text font-weight-bold" href="#">Show all adventures > </a></div>
+                </div>
+            </section>
+            <hr class="my-5">
+            <section id="examples">
+                 <!-- Heading -->
+                 <h4 class="mb-5 font-weight-bold ">Airbnb Plus places to stay</h4>
+                 <h6 class="mb-5 font-weight-light">A selection of places to stay verified for quality and design</h6>
+ 
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-12 col-md-12 mb-12">
+                        <div class="view overlay z-depth-1- rounded-lg">
+                            <img src="images/main/ea6285d9-5352-4447-b13d-b39bfc92dfe5.jpg" class="img-fluid border-ra rounded-lg" width="100%" alt="">
+                            <div class="mask rgba-white-slight d-flex align-items-end justify-content-center">
+                                <a href="#" class="explore_stays">EXPLORE STAYS ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="my-5">
+            
+            <section id="gallery">
+                <!-- Heading -->
+                <h4 class="mb-5 font-weight-bold" style="margin-bottom: 1% !important;">Places to stay around the world</h4>
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="card-deck">
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/d5ca49b5_original.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <div class="row justify-content-between ">
+                                    <div>
+                                        <span class="border border-dark rounded-lg font-weight-bold" style="padding: 3px; font-size: small;">SUPERHOST</span>
+                                        <span class="grey-text">regola·Rome</span><br>
+                                    </div>
+                                    <div>
+                                        <img src="images/red_star_icon.png" width="14px;">
+                                        <span>4.84</span>
+                                    </div>
+                                </div>
+                                <div class="row flex-column justify-content-start">
+                                    <span>Pettinarihome Campo de FIORI</span>
+                                    <p><strong>$95</strong>/night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/12bc436d_original.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <div class="row justify-content-between" style="margin-bottom: 5px;">
+                                    <div>
+                                        <span class="border border-dark rounded-lg font-weight-bold" style="padding: 3px; font-size: small;">SUPERHOST</span>
+                                        <span class="grey-text">Cape Town</span><br>
+                                    </div>
+                                    <div>
+                                        <img src="images/red_star_icon.png" width="14px;">
+                                        <span>4.80</span>
+                                    </div>
+                                </div>
+                                <div class="row flex-column justify-content-start">
+                                    <span>City Penthouse in Centeral Cape Town</span>
+                                    <p><strong>$129</strong>/night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/ac0a5754-031b-4d3e-a134-62593737ecf6.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <div class="row justify-content-between" style="margin-bottom: 5px;">
+                                    <div>
+                                        <span class="border border-dark rounded-lg font-weight-bold" style="padding: 3px; font-size: small;">SUPERHOST</span>
+                                        <span class="grey-text">Medina·Marrakesh</span><br>
+                                    </div>
+                                    <div>
+                                        <img src="images/red_star_icon.png" width="14px;">
+                                        <span>4.85</span>
+                                    </div>
+                                </div>
+                                <div class="row flex-column justify-content-start">
+                                    <span>The Cozy Palace</span>
+                                    <p><strong>$84</strong>/night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/6b9d06f7_original.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <div class="row justify-content-between" style="margin-bottom: 5px;">
+                                    <div>
+                                        <span class="border border-dark rounded-lg font-weight-bold" style="padding: 3px; font-size: small;">SUPERHOST</span>
+                                        <span class="grey-text">La Habana</span><br>
+                                    </div>
+                                    <div>
+                                        <img src="images/red_star_icon.png" width="14px;">
+                                        <span>4.93</span>
+                                    </div>
+                                </div>
+                                <div class="row flex-column justify-content-start">
+                                    <span>La Rosa de Ortega/Standard Room</span>
+                                    <p><strong>$70</strong>/night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="card-deck">
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/aa5f0e00_original.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <div class="row justify-content-between" style="margin-bottom: 5px;">
+                                    <div>
+                                        <span class="border border-dark rounded-lg font-weight-bold" style="padding: 3px; font-size: small;">SUPERHOST</span>
+                                        <span class="grey-text">Rignano sull'Arno</span><br>
+                                    </div>
+                                    <div>
+                                        <img src="images/red_star_icon.png" width="14px;">
+                                        <span>4.87</span>
+                                    </div>
+                                </div>
+                                <div class="row flex-column justify-content-start">
+                                    <span>Holiday in Toscany in the Strettoio</span>
+                                    <p><strong>$93</strong>/night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/7047ca41_original.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <div class="row justify-content-between" style="margin-bottom: 5px;">
+                                    <div>
+                                        <span class="border border-dark rounded-lg font-weight-bold" style="padding: 3px; font-size: small;">SUPERHOST</span>
+                                        <span class="grey-text">Koto-ku</span><br>
+                                    </div>
+                                    <div>
+                                        <img src="images/red_star_icon.png" width="14px;">
+                                        <span>4.94</span>
+                                    </div>
+                                </div>
+                                <div class="row flex-column justify-content-start">
+                                    <span>Decoboco hanare</span>
+                                    <p><strong>$73</strong>/night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <div class="row justify-content-between" style="margin-bottom: 5px;">
+                                    <div>
+                                        <span class="border border-dark rounded-lg font-weight-bold" style="padding: 3px; font-size: small;">SUPERHOST</span>
+                                        <span class="grey-text">Bali·Singaraja</span><br>
+                                    </div>
+                                    <div>
+                                        <img src="images/red_star_icon.png" width="14px;">
+                                        <span>4.93</span>
+                                    </div>
+                                </div>
+                                <div class="row flex-column justify-content-start">
+                                    <span>180 C VIEW, PRIVATE POOL VILLA..</span>
+                                    <p><strong>$179</strong>/night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/f65aa726-fc3d-4ec9-8606-1c0ae968922b.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <div class="row justify-content-between" style="margin-bottom: 5px;">
+                                    <div>
+                                        <span class=" rounded-lg font-weight-bold pink-darken-4" style="padding: 3px; font-size: small; background-color: #880e4f; color: aliceblue;">PLUS</span>
+                                        <span class="grey-text">Bali·Umalas</span><br>
+                                    </div>
+                                    <div>
+                                        <img src="images/red_star_icon_plus.png" width="14px;">
+                                        <span>4.81</span>
+                                    </div>
+                                </div>
+                                <div class="row flex-column justify-content-start">
+                                    <span>Tropical Canggu Villa on Ricefield near the...</span>
+                                    <p><strong>$122</strong>/night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                    </div>
+                </div>
+                <div><a class="show_all_adventures green-text font-weight-bold" href="#">Show all(2000+) > </a></div>
+
+            </section>
+            <hr class="my-5">
+
+            <section id="gallery">
+                <!-- Heading -->
+                <h4 class="mb-5 font-weight-bold" style="margin-bottom: 1% !important;">Top-rated experiences</h4>
+                <h6 class="mb-5 font-weight-light">Book activities led by local hosts on your next trip</h6>
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="card-deck">
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/c0ed26f6-46ec-43b6-870e-ebb535a44db2.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">CUBA</h6>
+                                <!--Text-->
+                                <p class="card-text">Afro-Culture Guide<br>From $79/person</p>
+                                <i class="fas fa-star">4.96(609)</i>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/5af8351e-a0b6-4783-ae8b-12a2a7ac7998.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">ITALY</h6>
+                                <!--Text-->
+                                <p class="card-text">Learn to row as a Venetian<br>From $56/person</p>
+                                <i class="fas fa-star">4.97(913)</i>
+
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                        <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/3478257c-c27f-4041-910f-b653a37df184.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">UNITED STATES</h6>
+                                <!--Text-->
+                                <p class="card-text">Boxing with Fire<br>From $110/person</p>
+                                <i class="fas fa-star">5.0(139)</i>
+
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/6161bd83-c1df-4747-a568-2cc681beab04.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">ITALY</h6>
+                                <!--Text-->
+                                <p class="card-text">Visit Rome in Mini Vintage Cabriolet<br>From $171/person</p>
+                                <i class="fas fa-star">5.0(186)</i>
+
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="card mb-3 card_box_shadow_none">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top image_border_radius" src="images/main/0cb17299-5f34-40b2-a9ea-cb8bbddcaecf.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                            <!--Title-->
+                                <h6 class="card-title">FRANCE</h6>
+                                <!--Text-->
+                                <p class="card-text">June 6th 1994, D-Day<br>From $91/person</p>
+                                <i class="fas fa-star">4.99(164)</i>
+
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        
+                    </div>
+
+                    <div><a class="show_all_adventures green-text font-weight-bold" href="#">Show all experiences > </a></div>
+                </div>
+            </section>
+
+            <hr class="my-5">
+
+            <section id="gallery">
+                <h4 class="mb-5 font-weight-bold " style="margin-bottom: 1% !important;">Featured Airbnb Plus destinations</h4>
+                <h6 class="mb-5 font-weight-light">Browse beautiful places to stay with all the comforts of home, plus more</h6>
+               
+                <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                            <img class="image_border_radius" src="images/room-1.jpg" alt="Card image cap" style="width: 100%;">
+
+                            <div class="carousel-caption">
+                                <h7 class="card-title purple-text">450+ VERIFIED STAYS</h7>
+                                <p class="card-text">Book sunny lofts, beachfront flats, and more verified places to stay in a city with world-class coffe and street art.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="image_border_radius" src="images/room-2.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="carousel-caption">
+                                <h7 class="card-title purple-text">450+ VERIFIED STAYS</h7>
+                                <p class="card-text">Book sunny lofts, beachfront flats, and more verified places to stay in a city with world-class coffe and street art.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="image_border_radius" src="images/room-3.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="carousel-caption">
+                                <h7 class="card-title purple-text">450+ VERIFIED STAYS</h7>
+                                <p class="card-text">Book sunny lofts, beachfront flats, and more verified places to stay in a city with world-class coffe and street art.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="image_border_radius" src="images/room-4.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="carousel-caption">
+                                <h7 class="card-title purple-text">450+ VERIFIED STAYS</h7>
+                                <p class="card-text">Book sunny lofts, beachfront flats, and more verified places to stay in a city with world-class coffe and street art.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="image_border_radius" src="images/room-5.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="carousel-caption">
+                                <h7 class="card-title purple-text">450+ VERIFIED STAYS</h7>
+                                <p class="card-text">Book sunny lofts, beachfront flats, and more verified places to stay in a city with world-class coffe and street art.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="image_border_radius" src="images/room-6.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="carousel-caption">
+                                <h7 class="card-title purple-text">450+ VERIFIED STAYS</h7>
+                                <p class="card-text">Book sunny lofts, beachfront flats, and more verified places to stay in a city with world-class coffe and street art.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+               
+                <div><a class="show_all_adventures purple-text font-weight-bold" href="#">Show all experiences > </a></div>
+            </section>
+            <hr class="my-5">
+            
+            <!--Section: Contact-->
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Template Script -->
+    <!-- <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script> -->
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/custom-core.js"></script>
+	
+	<script type="text/javascript" src="js/plugins/jquery.typeahead.min.js"></script>
+	<script type="text/javascript" src="js/custom-autocomplete.js"></script>
+	<script type="text/javascript" src="js/main_page/signup_form_modal.js"></script>
+
+
+    <!-- location scripts (optional) -->
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8pf6ZdFQj5qw7rc_HSGrhUwQKfIe9ICw"></script>
+    <script type="text/javascript" src="js/main_page/location_list.js"></script>
+
+
+</body>
+</html>
+<!-- https://maps.googleapis.com/maps/api/js?key=AIzaSyB8pf6ZdFQj5qw7rc_HSGrhUwQKfIe9ICw&v=3.31 -->
+

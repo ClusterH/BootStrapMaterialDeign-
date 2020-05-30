@@ -1,0 +1,115 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+header {
+    background: url("../images/main_background1.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.nav-link {
+    font-size: medium !important;
+    font-weight: 600 !important;
+}
+.mask_content {
+    display: flex;
+    justify-content: flex-start;
+}
+.search_location_modal {
+    width: auto;
+    max-width: 450px;
+}
+/* .check_data_picker {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+
+/* .check_in, .check_out {
+    width: 45%;
+} */
+.check_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.business_location {
+    width: 100% !important;
+    display: block !important;
+    color: white !important;
+    
+}
+.first_check, .second_check {
+    margin-bottom: 25px !important;
+}
+.container_body {
+    max-width: 1330px !important;
+    /* width: 100%;
+    margin-inline-start : 50px;
+    margin-inline-end: 50px; */
+}
+.presentation {
+    margin-top: 30px !important;
+}
+.navbar{
+    box-shadow: none !important;
+}
+.introducing_cooking {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+}
+.card_box_shadow_none {
+    box-shadow: none ;
+    margin: 10px !important;
+}
+.image_border_radius {
+    border-radius: 10px !important;
+}
+.full_screen_no {
+    width: 80%;
+}
+.explore_stays {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1280px){
+    .container .container_body {
+        max-width: 1280px !important;
+    }
+}
+@media (min-width: 1024px){
+    .container .container_body {
+        max-width: 1024px !important;
+    }
+}
+
+@media (min-width: 992px){
+    .container .container_body {
+        max-width: 992px !important;
+    }
+}
+
+
+    
